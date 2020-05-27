@@ -1,0 +1,110 @@
+@import '../../../../styles';
+
+.section2Container {
+  padding: 150px;
+  background-color: $section-two-background;
+  background-image: url("../../../../assets/staff-from-high.png");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: contain;
+
+  .upperContainer {
+    //categories list
+    .categories {
+      padding-bottom: 100px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-top: 34px;
+      //card
+      .specificCategory {
+        margin: 5px 10px;
+        color: #fff;
+        width: 170px;
+        box-shadow: 0 0 14px 0 rgba(0, 0, 0, .75);
+        border-radius: 2px;
+        position: relative;
+        height: 220px;
+
+        .imgCard {
+          width: inherit;
+          border-top-left-radius: 2px;
+          border-top-right-radius: 2px;
+          height: 100%;
+        }
+
+        .bottomCard {
+          padding: 8px;
+          position: absolute;
+          bottom: 0px;
+
+          .categoryName {
+            font-weight: bold;
+            font-size: 1rem;
+            line-height: 1.6;
+          }
+
+          .personDetails {
+            font-size: 0.6rem;
+
+            .artlist-color {
+              color: $artlist-main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //main text
+  .large-text {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .large-text.bottom {
+    font-size: 1.9rem;
+  }
+
+  .bottomContainer {
+    .thingsList {
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      flex-wrap: wrap;
+      max-width: 800px;
+      margin: 0 auto;
+
+      .specificThing {
+        width: 150px;
+        padding: 20px 50px 5px 50px;
+
+        .titleThing {
+          color: $artlist-main-color;
+          font-weight: bold;
+          font-size: 0.9rem;
+        }
+
+        .descriptionThing {
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .section2Container {
+    padding: 20px;
+
+    .upperContainer {
+      .categories {
+        .specificCategory {
+          width: 140px;
+        }
+      }
+    }
+  }
+}

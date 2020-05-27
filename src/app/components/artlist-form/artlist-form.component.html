@@ -1,0 +1,122 @@
+<div class="formComponentWrapper">
+  <i class="fas fa-times closeIcon" mat-dialog-close></i>
+  <div class="boardWrapper">
+    <div class="rightPanel">
+      <div class="uploadTitle">Upload music <span class="4-6songs">4-6 songs</span></div>
+      <app-upload (updateFilesEvent)="updateFiles($event)"></app-upload>
+
+      <div class="invalid-feedback" *ngIf="missingSongsNum>0">
+        upload at least {{missingSongsNum}} more song
+      </div>
+      <!--      checkboxes-->
+      <div class="checkboxes" [formGroup]="checkboxes">
+        <div class="myCheckBox">
+          <mat-checkbox formControlName="fullrights"
+                        [ngClass]="(warnAboutCheckbox && checkboxes.value.fullrights===false)?'red':''">I have full rights
+            for the music.
+          </mat-checkbox>
+        </div>
+        <div class="myCheckBox">
+          <mat-checkbox formControlName="artistsMaterial"
+                        [ngClass]="(warnAboutCheckbox && checkboxes.value.artistsMaterial===false)?'red':''">None of the
+            songs
+            are a cover of another artist's material.
+          </mat-checkbox>
+        </div>
+        <div class="myCheckBox">
+          <mat-checkbox formControlName="forUse"
+                        [ngClass]="(warnAboutCheckbox && checkboxes.value.forUse===false)?'red':''">The music is clear for
+            use in any web platform, including Youtube.
+          </mat-checkbox>
+        </div>
+      </div>
+
+      <button class="submitBtn" (click)="onSubmit()">Submit</button>
+    </div>
+    <div class="leftPanel">
+      <div class="formTitle">Submit your music</div>
+      <form [formGroup]="form" id="myform">
+        <mat-form-field appearance="outline">
+          <mat-label>Full name</mat-label>
+          <input matInput placeholder="Full name" formControlName="fullname">
+        </mat-form-field>
+        <div class="invalid-feedback" *ngIf="!form.controls.fullname.valid && form.controls.fullname.touched">
+          required field
+        </div>
+        <br>
+
+        <mat-form-field appearance="outline">
+          <mat-label>E-mail</mat-label>
+          <input matInput placeholder="E-mail" formControlName="email">
+        </mat-form-field>
+        <div class="invalid-feedback" *ngIf="!form.controls.email.valid && form.controls.email.touched ">
+          Email is not valid
+        </div>
+
+        <br>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Country</mat-label>
+          <mat-select formControlName="country">
+            <mat-option [value]="'Israel'">Israel</mat-option>
+            <mat-option [value]="'Brazil'">Brazil</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="invalid-feedback" *ngIf="!form.controls.country.valid && form.controls.country.touched">
+          required field
+        </div>
+        <br>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Bio</mat-label>
+          <textarea matInput
+                    cdkTextareaAutosize
+                    cdkAutosizeMinRows="5"
+                    cdkAutosizeMaxRows="10"
+                    formControlName="bio"></textarea>
+        </mat-form-field>
+        <div class="invalid-feedback" *ngIf="!form.controls.bio.valid && form.controls.bio.touched">
+          required field
+        </div>
+        <br>
+
+        <mat-form-field appearance="outline">
+          <mat-label>What do you do?</mat-label>
+          <mat-select formControlName="whatdoyoudo">
+            <mat-option [value]="'Artist'">Artist</mat-option>
+            <mat-option [value]="'Piano expert'">Piano expert</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div class="invalid-feedback" *ngIf="!form.controls.whatdoyoudo.valid && form.controls.whatdoyoudo.touched">
+          required field
+        </div>
+        <br>
+        <div class="relative">
+          <mat-form-field appearance="outline">
+            <mat-label>Portfolio links</mat-label>
+            <input matInput placeholder="E-mail" formControlName="portfolio">
+          </mat-form-field>
+          <div class="invalid-feedback" *ngIf="!form.controls.portfolio.valid && form.controls.portfolio.touched">
+            required field
+          </div>
+          <span class="tooltiptext">Help us get to know you by sending us links to your
+          website, Souncloud, facebook page and etc.<span className="chat black"></span></span>
+        </div>
+
+        <section class="example-section">
+          <label class="example-margin">Are you registered with a PRO?</label>
+          <mat-radio-group formControlName="pro">
+            <mat-radio-button class="example-margin" value="true">Yes</mat-radio-button>
+            <mat-radio-button class="example-margin" value="false">No</mat-radio-button>
+          </mat-radio-group>
+        </section>
+        <div class="invalid-feedback" *ngIf="!form.controls.pro.valid && form.controls.pro.touched">
+          required field
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+

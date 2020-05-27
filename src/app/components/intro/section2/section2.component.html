@@ -1,0 +1,29 @@
+<div class="section2Container">
+
+    <div class="upperContainer">
+      <div class="large-text upper">Join leading artists around the world</div>
+      <div class="categories">
+        <div class="specificCategory" *ngFor="let c of localCategories">
+          <img src="../../../assets/artists_images/{{c.imageName}}" class="imgCard"/>
+          <div class="bottomCard">
+            <div class="categoryName">{{c.title}}</div>
+            <div class="personDetails">
+              <span class="artlist-color">{{c.name + '  '}}</span>
+              <span>{{c.description}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottomContainer">
+      <div class="large-text bottom">Keep doing your thing</div>
+      <div class="thingsList">
+        <div *ngFor="let t of localThings" class="specificThing">
+          <div class="titleThing">{{t.title}}</div>
+          <div class="descriptionThing">{{t.description}}</div>
+        </div>
+      </div>
+    </div>
+</div>
+

@@ -1,0 +1,27 @@
+<div class="section3Container">
+  <div class="bodyWrapper">
+    <div class="large-box">
+      <div class="large-text">
+        Things to check
+        before we start
+      </div>
+      <div class="checkList">
+        <div *ngFor="let t of localThingsToCheck"><span>Check</span>{{t}}</div>
+      </div>
+      <div>
+        <button class="startBtn" mat-button (click)="openDialog()">Start Now</button>
+      </div>
+    </div>
+    <div class="imgWrapper"><img src="../../../../assets/picturs-zoomin.png" class="galeryImg"></div>
+  </div>
+  <div class="footer">
+    <div class="artlistMail">artlist@artlist.io</div>
+    <div class="socialIcons">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.vimeo.com" target="_blank"><i class="fab fa-vimeo-v"></i></a>
+      <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="songsList">
+  <div class="specificSong" *ngFor="let s of files">
+    <span>{{s.name}}</span><span class="removeBtn" (click)="remove(s)">remove</span>
+  </div>
+</div>
+
+<div class="btnWrapper" (click)="fileUpload.click()" *ngIf="this.files.length!==6" appDragDrop
+     (onFileDropped)="importFile($event)">
+  <div class="uploadTextWrapper">
+    <div><span class="boldText">Click to upload</span><span class="dragText">or drag and drop here</span></div>
+    <div class="fileFormat">MP3 /WAV format</div>
+  </div>
+</div>
+<br/>
+
+<input #fileUpload type="file" multiple (change)="importFile($event)" style="display:none"
+       accept=".mp3,audio/*">
+
+

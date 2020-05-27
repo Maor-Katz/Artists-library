@@ -1,0 +1,90 @@
+.custom-images-modalbox {
+  max-width: none !important;
+  position: relative;
+
+  mat-dialog-container {
+    opacity: 0.6;
+    border-radius: 0px;
+    padding: 0px;
+    scroll-width: thin;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.mat-form-field-empty.mat-form-field-label {
+  color: #fff;
+}
+
+.mat-form-field-label {
+  color: #fff;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: inherit;
+}
+
+.mat-form-field {
+  width: 280px !important;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: $artlist-main-color;
+}
+
+.mat-input-element {
+  caret-color: $artlist-main-color;
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: $artlist-main-color;
+}
+
+.mat-radio-inner-circle {
+  background-color: $artlist-main-color !important;
+}
+
+.mat-radio-outer-circle {
+  border-color: $artlist-main-color !important;
+}
+
+.mat-ripple-element {
+  background-color: $artlist-main-color !important;
+}
+
+.mat-radio-label {
+  padding: 5px;
+}
+
+.example-section {
+  width: 70%;
+  margin: auto;
+}
+
+.ng-star-inserted {
+  color: #fff;
+}
+
+.ng-star-inserted.mat-focused {
+  color: $artlist-main-color;
+}
+
+.mat-checkbox-frame {
+  border-color: inherit;
+  background-color: $artlist-main-color;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: $artlist-main-color;
+}
+
+.mat-checkbox-layout {
+  white-space: unset !important;
+}
+
+.custom-images-modalbox mat-dialog-container {
+  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,59 @@
+@import '../../../../styles';
+
+.specificSong {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px 0px;
+
+  .removeBtn:hover {
+    cursor: pointer;
+  }
+}
+
+.btnWrapper {
+  width: 70%;
+  height: 150px;
+  border: dashed 2px #fff;
+  border-radius: 2px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial;
+
+
+  .boldText {
+    padding-right: 5px;
+    color: $artlist-main-color;
+  }
+
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#file-label {
+  display: inline-flex;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+#file-label mat-icon {
+  font-size: 18px;
+  text-align: center;
+}
+
+#file-label a {
+  cursor: pointer;
+}
+
+
+

@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+//@import "override-material";
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Raleway', 'sans-serif';
+}
+
+$section-one-background: rgb(217, 169, 169);
+$section-two-background: rgb(23, 23, 23);
+$section-three-background: rgb(91, 97, 123);
+$artlist-main-color: rgb(255, 218, 41);
+@mixin artlist-btn() {
+  background-color: rgb(255, 218, 41);
+  color: black;
+  display: inline-block;
+  padding: 0.4rem 1.3rem;
+  border: none;
+  border-radius: 50px 50px 50px 50px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  outline: none;
+  transition: all 0.2s ease-in;
+  font-family: 'Raleway', 'sans-serif';
+  &:hover {
+    background-color: darken(rgb(255, 218, 11), 10);
+  }
+}
+
+@mixin backgroundImg($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@import "app/material/overridematerial";
